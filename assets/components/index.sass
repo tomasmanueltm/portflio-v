@@ -1,2 +1,157 @@
 @import "__"
 @import url("icons.css")
+
+
+header
+    @include index
+    @include flex(center)
+
+    nav
+        @include flex(center)
+    .toggle
+        display: none
+
+        @include mobile-sm
+            display: block
+
+    h1
+            color: #333
+            font-size: 1.8rem
+            font-family: Museo
+            padding: 0 2rem 0 0
+    ul
+        display: none
+
+        li
+            margin: 0 0 0 1rem
+            display: inline-block
+
+            a
+                color: #333
+                letter-spacing: .2rem
+    // 
+    div
+        @include flex(center)
+
+        // @include mobile-desk
+        //     flex-direction: column
+        a
+            margin: 0 .5rem
+
+            i
+                color: #333
+                font-size: 1.2rem
+
+            &:last-child
+                display: none
+                color: #fff
+                font-weight: 300
+                margin: 0 0 0 .5rem
+                border-radius: 5px
+                background: #333
+                padding: .6rem 1rem
+                letter-spacing: 2px
+
+section
+    @include index
+    overflow-x: hidden
+
+    .carousel
+        // padding: 2rem
+        @include flex(center)
+
+        @include table
+            gap: 3rem
+            flex-direction: column-reverse
+
+        .legenda
+            width: 700px
+
+            @include table
+                width: 100%
+                padding: .5rem
+
+            h1
+                font-size: 3vw
+                // line-height: 2rem
+                font-family: Museo
+
+                @include mobile-
+                    font-size: 8vw
+
+                span
+                    color: #999
+                    display: block
+                    letter-spacing: .2rem
+            p
+                font-weight: 400
+                padding: 1rem 0 0
+                line-height: 1.5rem
+
+            div.cards-link
+                padding: 1rem 0 0
+
+                label
+                    padding: 0 1rem 1rem 0
+                    display: inline-block
+
+                    h5
+                        color: #000
+                        font-weight: 900
+                        letter-spacing: .1rem
+                    span
+                        color: #999
+                        font-weight: 400
+                        padding: .5rem 0
+
+            div.cards-doc
+                float: left
+                display: block
+                padding: 1rem 0
+                a
+                    color: #fff
+                    font-size: .8rem                   
+                    min-width: 110px
+                    background: #000
+                    font-family: Museo 
+                    border-radius: 3px
+                    text-align: center
+                    margin: 0 .5rem 1rem 0
+                    letter-spacing: 1.5px
+                    padding: .8rem 1.8rem
+                    display: inline-block
+                    
+                    &:first-child
+                        background: #999
+
+        .img
+            // padding: 2rem
+
+            width: 25vw
+            height: 25vw
+            border-radius: 50%
+            position: relative
+
+            @include table
+                width: 38vw
+                height: 38vw
+                margin: 0 auto
+
+            &::before
+                // content: ""
+                display: block
+                background: orange
+                width: 300px
+                height: 300px
+                position: absolute
+                // clip-path: polygon(0 0, 100% 21%, 75% 100%, 0% 100%)
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border-radius: 50%
+            // display: none
+
+
+

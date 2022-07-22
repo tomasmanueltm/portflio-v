@@ -1,10 +1,10 @@
 @font-face 
-    font-family: "Roboto"
-    src: url("../font/Roboto.ttf")
+    font-family: "Raleway"
+    src: url("Raleway.ttf")
 
 @font-face 
-    font-family: "Poppins"
-    src: url("../font/Poppins.ttf")
+    font-family: "Museo"
+    src: url("Museo.otf")
 
 
 // configuracao padrao
@@ -12,19 +12,20 @@
     margin: 0px
     padding: 0px
     list-style: none
-    font-weight: 400
-    word-break: keep-all
-    font-family: Roboto
+    font-weight: 600
+    user-select: none
+    font-family: Raleway
+    word-break: break-word
     text-decoration: none
     box-sizing: border-box
+    scrollbar-width: none
     scroll-behavior: smooth
 
 
 // configuracao padrao
 body
-    --l: #ff7d1b
-    --colorB: #fa4a4d
-    --colorC: #1a1b1e
+    margin: 0px
+    padding: 0px
     overflow-x: hidden	
 	
 
@@ -48,7 +49,7 @@ body
 
 
 // Regras e Funções
-@mixin index($p: 2.5em 3rem, $w: 100%)
+@mixin index($p: 2.5em 2rem, $w: 100%)
     width: $w
     padding: $p 
 
@@ -74,10 +75,10 @@ body
 @mixin table
     @media ( max-width:  768px)
         @content
-@mixin mobile-desk
+@mixin mobile-sm
     @media ( max-width:  600px)
         @content
-@mixin mobile-desk
+@mixin mobile-
     @media ( max-width:  425px)
         @content
 @mixin mobile-normal
