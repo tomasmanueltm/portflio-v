@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../font/Poppins.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-weight: 400;
+  word-break: keep-all;
+  font-family: Roboto;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  --l: #ff7d1b;
+  --colorB: #fa4a4d;
+  --colorC: #1a1b1e;
+  overflow-x: hidden;
+}
+
+::scrollbar {
+  width: 0px !important;
+}
+
+*::scrollbar {
+  width: 0px !important;
+}
+
+*::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+*::-moz-scrollbar {
+  width: 0px !important;
+}
+
+*::-ms-scrollbar {
+  width: 0px !important;
+}
+
+*::-moz-osx-scrollbar {
+  width: 0px !important;
+}
+
+*::-o-scrollbar {
+  width: 0px !important;
+}
