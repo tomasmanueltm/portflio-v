@@ -57,11 +57,12 @@ section
     overflow-x: hidden
 
     .carousel
-        // padding: 2rem
+        padding: 2rem
         @include flex(center)
 
         @include table
             gap: 3rem
+            padding: 0px
             flex-direction: column-reverse
 
         .legenda
@@ -152,6 +153,122 @@ section
                 object-fit: cover
                 border-radius: 50%
             // display: none
+    .lista
+        padding: 3rem 0
 
+        ul
+            padding: 1rem
+            margin: 0 auto
+            @include flex(center, center)
+            flex-wrap: wrap
+            gap: 1rem
+
+            @include table
+                padding: .5rem
+                // flex-direction: column
+
+            li
+                width: 350px
+                padding: 1rem .5rem
+                border-radius: 4px
+                box-shadow: 0px 1px 3px 0px #111
+                @include flex(center, space-around)
+                gap: 1.2rem
+
+                @include mobile-sm
+                    width: 100%
+
+                span
+                    width: 20px
+                    height: 20px
+                    display: block
+                    padding: .1rem
+                    background: #777
+                    border-radius: 50%
+                    @include flex(center, center)
+
+                &:last-child
+                    span
+                        color: #fff
+                        background: #000!important
+
+
+                div
+                    @include flex(normal, normal)
+                    flex-direction: column
+
+                    h4
+                        font-weight: 900
+                        font-family: Museo
+                    p
+                        font-size: .8rem
+                        line-height: 1.2rem
+    .skill
+        @include grid(1)
+
+        .sobre
+            @include grid-r(.1fr 1fr)
+            p
+                // width: 300px
+                position: relative
+                // transform: rotate(-90deg)
+
+                &::before
+                    top: 2rem
+                    left: -20px
+                    content: "Meu Skill"
+                    display: block
+                    width: 90px
+                    height: 0px
+                    position: absolute
+                    transform: rotate(-90deg)
+                &::after
+                    left: 0.3rem
+                    top: 8.3rem
+                    content: ""
+                    width: 63px
+                    height: 1px
+                    display: block
+                    padding: 0.1rem
+                    background: #777
+                    border-radius: 8px
+                    position: absolute
+                    transform: rotate(90deg)
+            .descricao
+                h1
+                    color: #000
+                    font-size: 2rem
+                    font-weight: 900
+                    font-family: Museo
+                span
+                    font-weight: 400
+                ul
+                    padding: 2rem 0 0 0
+                    @include grid(1)
+                    
+                    li
+                        h2
+                            @include flex
+                            padding: .4rem 0
+
+                            span
+                                font-weight: 900
+                                font-size: 1rem
+
+                        .progress
+                            width: 100%
+                            padding: .3rem
+                            background: #999
+                            border-radius: 5px
+                            position: relative
+
+                            &::before
+                               width: 100%
+                               content: ""
+                               z-index: -2
+                               display: block
+                               padding: .5rem
+                               background: red 
+                            // background: radial-gradient( circle closest-side, transparent 66%, white 0), conic-gradient( #4e79a7 8%, #f28e2c 0, #f28e2c 61%)
 
 
