@@ -303,16 +303,16 @@ section .skill {
     grid-gap: 1rem;
   }
 }
-section .skill .sobre {
+section .skill div.sobre {
   display: grid;
   grid-template-columns: 0.1fr 1fr;
   grid-gap: 1rem;
 }
-section .skill .sobre p {
+section .skill div.sobre p {
   line-height: 0px;
   position: relative;
 }
-section .skill .sobre p::before {
+section .skill div.sobre p::before {
   top: 2rem;
   left: -20px;
   content: "Meu Skill";
@@ -322,7 +322,7 @@ section .skill .sobre p::before {
   position: absolute;
   transform: rotate(-90deg);
 }
-section .skill .sobre p::after {
+section .skill div.sobre p::after {
   top: 8.3rem;
   content: "";
   width: 63px;
@@ -335,43 +335,43 @@ section .skill .sobre p::after {
   position: absolute;
   transform: rotate(90deg);
 }
-section .skill .sobre .descricao h1 {
+section .skill div.sobre .descricao h1 {
   color: #000;
   font-size: 2rem;
   font-weight: 900;
   padding: 0 0 1rem;
 }
-section .skill .sobre .descricao span {
+section .skill div.sobre .descricao span {
   font-weight: 400;
   line-height: 1.8rem;
 }
-section .skill .sobre .descricao ul {
+section .skill div.sobre .descricao .lista-progress {
   padding: 1.3rem 0 0 0;
 }
-section .skill .sobre .descricao ul li {
+section .skill div.sobre .descricao .lista-progress li {
   display: block;
   margin: 0 0 1rem 0;
   --progress: attr(data-progress);
 }
-section .skill .sobre .descricao ul li h2 {
+section .skill div.sobre .descricao .lista-progress li h2 {
   display: flex;
   align-items: normal;
   justify-content: space-between;
   flex-direction: row;
   padding: 0.2rem 0;
 }
-section .skill .sobre .descricao ul li h2 span {
+section .skill div.sobre .descricao .lista-progress li h2 span {
   font-size: 1rem;
   font-weight: 900;
   line-height: unset;
 }
-section .skill .sobre .descricao ul li h2 span:last-child {
+section .skill div.sobre .descricao .lista-progress li h2 span:last-child {
   font-family: Museo;
 }
-section .skill .sobre .descricao ul li h2 span:last-child::before {
+section .skill div.sobre .descricao .lista-progress li h2 span:last-child::before {
   content: var(--progress);
 }
-section .skill .sobre .descricao ul li .progress {
+section .skill div.sobre .descricao .lista-progress li .progress {
   width: 100%;
   padding: 0.3rem;
   overflow: hidden;
@@ -379,7 +379,7 @@ section .skill .sobre .descricao ul li .progress {
   border-radius: 5px;
   position: relative;
 }
-section .skill .sobre .descricao ul li .progress i {
+section .skill div.sobre .descricao .lista-progress li .progress i {
   top: 0px;
   left: 0px;
   z-index: 0;
@@ -390,5 +390,40 @@ section .skill .sobre .descricao ul li .progress i {
   background: #333;
   border-radius: 4px;
   position: absolute;
-  transition: width 200ms;
+  transition: width 2ms;
+}
+section .skill .lista-skill {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  padding: 2rem !important;
+}
+section .skill .lista-skill li {
+  height: 150px;
+  background: #999;
+  border-radius: 5px;
+  margin: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+section .skill .lista-skill li span {
+  width: 50px;
+  height: 50px;
+  padding: 1.4rem;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+section .skill .lista-skill li span i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+section .skill .lista-skill li h5 {
+  font-size: 1.2rem;
 }/*# sourceMappingURL=index.css.map */
