@@ -72,14 +72,6 @@ header nav {
   justify-content: space-between;
   flex-direction: row;
 }
-header .toggle {
-  display: none;
-}
-@media (max-width: 600px) {
-  header .toggle {
-    display: block;
-  }
-}
 header h1 {
   color: #333;
   font-size: 1.8rem;
@@ -150,7 +142,7 @@ section .carousel .legenda {
   }
 }
 section .carousel .legenda h1 {
-  font-size: 3vw;
+  font-size: 3.2vw;
   font-family: Museo;
 }
 @media (max-width: 425px) {
@@ -234,7 +226,8 @@ section .carousel .img img {
   border-radius: 50%;
 }
 section .lista {
-  padding: 3rem 0;
+  display: block;
+  padding: 2rem 0 3rem;
 }
 section .lista ul {
   padding: 1rem;
@@ -262,7 +255,7 @@ section .lista ul li {
   flex-direction: row;
   gap: 1.2rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   section .lista ul li {
     width: 100%;
   }
@@ -300,8 +293,15 @@ section .lista ul li div p {
 }
 section .skill {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+}
+@media (max-width: 768px) {
+  section .skill {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
 }
 section .skill .sobre {
   display: grid;
@@ -309,6 +309,7 @@ section .skill .sobre {
   grid-gap: 1rem;
 }
 section .skill .sobre p {
+  line-height: 0px;
   position: relative;
 }
 section .skill .sobre p::before {
@@ -322,11 +323,11 @@ section .skill .sobre p::before {
   transform: rotate(-90deg);
 }
 section .skill .sobre p::after {
-  left: 0.3rem;
   top: 8.3rem;
   content: "";
   width: 63px;
   height: 1px;
+  left: -0.7rem;
   display: block;
   padding: 0.1rem;
   background: #777;
@@ -338,40 +339,56 @@ section .skill .sobre .descricao h1 {
   color: #000;
   font-size: 2rem;
   font-weight: 900;
-  font-family: Museo;
+  padding: 0 0 1rem;
 }
 section .skill .sobre .descricao span {
   font-weight: 400;
+  line-height: 1.8rem;
 }
 section .skill .sobre .descricao ul {
-  padding: 2rem 0 0 0;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1rem;
+  padding: 1.3rem 0 0 0;
+}
+section .skill .sobre .descricao ul li {
+  display: block;
+  margin: 0 0 1rem 0;
+  --progress: attr(data-progress);
 }
 section .skill .sobre .descricao ul li h2 {
   display: flex;
   align-items: normal;
   justify-content: space-between;
   flex-direction: row;
-  padding: 0.4rem 0;
+  padding: 0.2rem 0;
 }
 section .skill .sobre .descricao ul li h2 span {
-  font-weight: 900;
   font-size: 1rem;
+  font-weight: 900;
+  line-height: unset;
+}
+section .skill .sobre .descricao ul li h2 span:last-child {
+  font-family: Museo;
+}
+section .skill .sobre .descricao ul li h2 span:last-child::before {
+  content: var(--progress);
 }
 section .skill .sobre .descricao ul li .progress {
   width: 100%;
   padding: 0.3rem;
+  overflow: hidden;
   background: #999;
   border-radius: 5px;
   position: relative;
 }
-section .skill .sobre .descricao ul li .progress::before {
-  width: 100%;
+section .skill .sobre .descricao ul li .progress i {
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  right: 0px;
+  bottom: 0px;
   content: "";
-  z-index: -2;
   display: block;
-  padding: 0.5rem;
-  background: red;
+  background: #333;
+  border-radius: 4px;
+  position: absolute;
+  transition: width 200ms;
 }/*# sourceMappingURL=index.css.map */

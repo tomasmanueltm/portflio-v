@@ -8,11 +8,11 @@ header
 
     nav
         @include flex(center)
-    .toggle
-        display: none
+    // .toggle
+    //     display: none
 
-        @include mobile-sm
-            display: block
+    //     @include mobile-sm
+    //         display: block
 
     h1
             color: #333
@@ -73,7 +73,7 @@ section
                 padding: .5rem
 
             h1
-                font-size: 3vw
+                font-size: 3.2vw
                 // line-height: 2rem
                 font-family: Museo
 
@@ -154,7 +154,8 @@ section
                 border-radius: 50%
             // display: none
     .lista
-        padding: 3rem 0
+        display: block
+        padding: 2rem 0 3rem
 
         ul
             padding: 1rem
@@ -175,7 +176,7 @@ section
                 @include flex(center, space-around)
                 gap: 1.2rem
 
-                @include mobile-sm
+                @include table
                     width: 100%
 
                 span
@@ -204,14 +205,16 @@ section
                         font-size: .8rem
                         line-height: 1.2rem
     .skill
-        @include grid(1)
+        @include grid(2)
+        @include table
+            @include grid(1)
 
         .sobre
             @include grid-r(.1fr 1fr)
+
             p
-                // width: 300px
+                line-height: 0px
                 position: relative
-                // transform: rotate(-90deg)
 
                 &::before
                     top: 2rem
@@ -222,12 +225,13 @@ section
                     height: 0px
                     position: absolute
                     transform: rotate(-90deg)
+
                 &::after
-                    left: 0.3rem
                     top: 8.3rem
                     content: ""
                     width: 63px
                     height: 1px
+                    left: -0.7rem
                     display: block
                     padding: 0.1rem
                     background: #777
@@ -239,36 +243,55 @@ section
                     color: #000
                     font-size: 2rem
                     font-weight: 900
-                    font-family: Museo
+                    padding: 0 0 1rem
+                    // font-family: Museo
                 span
                     font-weight: 400
+                    line-height: 1.8rem
                 ul
-                    padding: 2rem 0 0 0
-                    @include grid(1)
+                    padding: 1.3rem 0 0 0
                     
                     li
+                        display: block
+                        margin: 0 0 1rem 0
+
+                        --progress: attr(data-progress)
+
                         h2
                             @include flex
-                            padding: .4rem 0
+                            padding: .2rem 0
 
                             span
-                                font-weight: 900
                                 font-size: 1rem
+                                font-weight: 900
+                                line-height: unset
+
+                                &:last-child
+                                    font-family: Museo
+                                    &::before
+                                        content: var(--progress)
 
                         .progress
                             width: 100%
                             padding: .3rem
+                            overflow: hidden
                             background: #999
                             border-radius: 5px
                             position: relative
 
-                            &::before
-                               width: 100%
-                               content: ""
-                               z-index: -2
-                               display: block
-                               padding: .5rem
-                               background: red 
+                            i
+                                top: 0px
+                                left: 0px
+                                z-index: 0
+                                right: 0px
+                                bottom: 0px
+                                content: ""
+                                display: block
+                                background: #333
+                                border-radius: 4px
+                                position: absolute
+
+                                transition: width 200ms
                             // background: radial-gradient( circle closest-side, transparent 66%, white 0), conic-gradient( #4e79a7 8%, #f28e2c 0, #f28e2c 61%)
 
 
